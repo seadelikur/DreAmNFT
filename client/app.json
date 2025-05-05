@@ -1,0 +1,100 @@
+// C:\Users\bilge.ganitopal\dreamnft\client\app.json
+{
+  "expo": {
+    "name": "DreAmNFT",
+    "slug": "dreamnft",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png", // Bu assetleri de eklemen gerekecek
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png", // Bu assetleri de eklemen gerekecek
+      "resizeMode": "contain",
+      "backgroundColor": "#6A0DAD"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.dreamnft.app",
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "We need access to your microphone to record your dream narrations.",
+        "NSCameraUsageDescription": "We need access to your camera to take profile pictures and upload images related to your dreams.",
+        "NSPhotoLibraryUsageDescription": "We need access to your photo library to upload images related to your dreams.",
+        "UIBackgroundModes": ["remote-notification"],
+        "FirebaseAppDelegateProxyEnabled": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png", // Bu assetleri de eklemen gerekecek
+        "backgroundColor": "#6A0DAD"
+      },
+      "package": "com.dreamnft.app",
+      "versionCode": 1,
+      "permissions": [
+        "RECORD_AUDIO",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "RECEIVE_BOOT_COMPLETED",
+        "WAKE_LOCK"
+      ],
+      "googleServicesFile": "./google-services.json" // Bu dosyayı Firebase'den indirip eklemen gerekecek
+    },
+    "web": {
+      "favicon": "./assets/favicon.png" // Bu assetleri de eklemen gerekecek
+    },
+    "plugins": [
+      "expo-notifications",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them as part of your dream NFTs."
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "The app needs access to your microphone to record your dream descriptions."
+        }
+      ],
+      [
+        "@react-native-firebase/app",
+        {
+          "android": {
+            "googleServicesFile": "./google-services.json"
+          },
+          "ios": {
+            "googleServicesFile": "./GoogleService-Info.plist"
+          }
+        }
+      ],
+      [
+        "expo-build-properties", // Tekrar eklendi
+        {
+          "android": {
+            "enableProguardInReleaseBuilds": true,
+            "extraProguardRules": "-keep class com.facebook.react.** { *; }\n-keep class com.expo.** { *; }", // EXPO İÇİN EKLENDİ            
+            "packagingOptions": {
+              "pickFirst": ["**/libc++_shared.so"]
+            }
+          },
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "EXPO_PUBLIC_OPENAI_API_KEY": "SENİN_GİZLİ_OPENAI_ŞİFREN_BURAYA_GELECEK",
+      "EXPO_PUBLIC_STABILITY_API_KEY": "SENİN_GİZLİ_STABILITYAI_ŞİFREN_BURAYA_GELECEK",
+      "eas": {
+        "projectId": "dreamnft-831df" // Kendi EAS Proje ID'n
+      }
+    }
+  }
+}

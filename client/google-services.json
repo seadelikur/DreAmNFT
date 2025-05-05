@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "965353386187",
+    "project_id": "dreamnft-831df",
+    "storage_bucket": "dreamnft-831df.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965353386187:android:6b74ffeac2208b26276b4e",
+        "android_client_info": {
+          "package_name": "com.dreamnft.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1X09CUIQ0kKNWutuvvVlThlBlpnmBkPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

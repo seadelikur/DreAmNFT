@@ -1,0 +1,22 @@
+{
+  "name": "dreamnft-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.js"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.3.0",
+    "dotenv": "^16.0.3",
+    "ethers": "^6.13.5",
+    "express": "^4.18.2",
+    "hardhat": "^2.17.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "eslint": "^9.25.1"
+  }
+}
